@@ -15,9 +15,11 @@ defmodule Poc.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Poc.PubSub},
       # Start the Endpoint (http/https)
-      PocWeb.Endpoint
+      PocWeb.Endpoint,
       # Start a worker by calling: Poc.Worker.start_link(arg)
       # {Poc.Worker, arg}
+      Poc.Broadway
+      # Start a broadway supervisor
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
